@@ -39,8 +39,8 @@ export default {
     <header class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <span v-for="(item, index) in menu" :key="index">
+                <div class="col px-3">
+                    <span class="px-3" v-for="(item, index) in menu" :key="index">
                         {{ item.label }}
                     </span>
                 </div>
