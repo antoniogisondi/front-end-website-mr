@@ -5,6 +5,7 @@ import Projects from '../pages/Projects.vue';
 import AboutUs from '../pages/AboutUs.vue';
 import ContactUs from '../pages/ContactUs.vue';
 import Blog from '../pages/Blog.vue';
+import ThankYou from '../pages/ThankYou.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -38,6 +39,11 @@ const router = createRouter({
             path: '/blog',
             name: 'blog',
             component: Blog
+        },
+        {
+            path: '/thank-you',
+            name: 'thank_you',
+            component: ThankYou
         },
     ]
 });
