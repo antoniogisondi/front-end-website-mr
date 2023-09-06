@@ -21,7 +21,7 @@ export default {
                 },
                 {
                     label: 'Contattaci',
-                    route_name: 'ask_us'
+                    route_name: 'contact_us'
                 },
                 {
                     label: 'Blog',
@@ -40,9 +40,15 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col px-3">
-                    <span class="px-3" v-for="(item, index) in menu" :key="index">
-                        {{ item.label }}
-                    </span>
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+                        <ul class="navbar-nav">
+                            <li class="nav-item" v-for="(item, index) in menu" :key="index">
+                                <router-link class="nav-link" :to="{ name: item.route_name }">
+                                    {{ item.label }}
+                                </router-link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
