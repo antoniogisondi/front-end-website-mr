@@ -42,7 +42,7 @@ export default {
                 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
                     <div class="container">
                         <router-link class="navbar-brand" :to="{ name: 'homepage' }">
-                            <img src="path_to_your_logo.png" alt="Logo Azienda Edile" class="logo">
+                            <img src="../assets/logo-mr.png" alt="Logo Azienda Edile" class="logo">
                         </router-link>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
