@@ -92,8 +92,9 @@ export default {
                         </div>
 
                         <div class="custom-col-12 my-3">
-                            <button type="submit" class="custom-button" :disabled="loading">Invia</button>
-                            <span v-if="loading" class="custom-loading">Invio in corso...</span>
+                            <button v-if="loading" type="submit" class="custom-button" :disabled="loading">Invio in
+                                corso...</button>
+                            <button v-else class="custom-button">Invio</button>
                         </div>
                     </form>
                 </div>
