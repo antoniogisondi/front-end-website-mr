@@ -48,43 +48,52 @@ export default {
 }
 </script>
 <template>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mt-4">
-                    <h1>Contattaci - Matera Riccardo Artigiano Edile</h1>
+    <div class="custom-container">
+        <div class="custom-content">
+            <div class="custom-row">
+                <div class="custom-col">
+                    <h1 class="custom-heading">Contattaci</h1>
                 </div>
-                <div class="col-12">
+            </div>
+            <div class="custom-row">
+                <div class="custom-col">
                     <form @submit.prevent="sendMail()" class="row">
-                        <div class="col-12 col-md-6 my-3">
-                            <label class="control-label" for="name">Nome e Cognome</label>
-                            <input type="text" name="name" id="name" v-model="name" placeholder="Nome e Cognome"
-                                class="form-control" :class="errors.name ? 'is-invalid' : ''">
-                            <p v-for="(error, index) in errors.name" :key="index" class="text-danger">
-                                {{ error }}
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-6 my-3">
-                            <label class="control-label" for="email">Email</label>
-                            <input type="text" name="email" id="email" v-model="email" placeholder="email@example.com"
-                                class="form-control" :class="errors.email ? 'is-invalid' : ''">
-                            <p v-for="(error, index) in errors.email" :key="index" class="text-danger">
-                                {{ error }}
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-6 my-3">
-                            <label class="control-label" for="name">Messaggio</label>
-                            <textarea name="message" id="message" v-model="message" placeholder="Messagio"
-                                class="form-control" :class="errors.content ? 'is-invalid' : ''"></textarea>
-                            <p v-for="(error, index) in errors.description" :key="index" class="text-danger">
-                                {{ error }}
-                            </p>
-                        </div>
-                        <div class="col-12  my-3">
-                            <div v-if="loading" class="disabled">
-                                <button class="btn btn-sm btn-success" type="submit">Invia</button>
+                        <div class="custom-col-12 custom-col-md-6 my-3">
+                            <label for="name" class="custom-label">Nome e Cognome</label>
+                            <input type="text" name="name" id="name" v-model="name" class="custom-input"
+                                placeholder="Nome e Cognome" :class="errors.name ? 'is-invalid' : ''">
+                            <div v-for="(error, index) in errors.name" :key="index" class="text-danger">
+                                <p class="custom-error">
+                                    {{ error }}
+                                </p>
                             </div>
-                            <button v-else class="btn btn-sm btn-success" type="submit">Invia</button>
+                        </div>
+
+                        <div class="custom-col-12 custom-col-md-6 my-3">
+                            <label for="email" class="custom-label">Email</label>
+                            <input type="text" name="email" id="email" v-model="email" class="custom-input"
+                                placeholder="email@example.com" :class="errors.email ? 'is-invalid' : ''">
+                            <div v-for="(error, index) in errors.email" :key="index" class="text-danger">
+                                <p class="custom-error">
+                                    {{ error }}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="custom-col-12 my-3">
+                            <label for="message" class="custom-label">Messaggio</label>
+                            <textarea name="message" id="message" v-model="message" class="custom-textarea"
+                                placeholder="Messaggio" :class="errors.content ? 'is-invalid' : ''"></textarea>
+                            <div v-for="(error, index) in errors.description" :key="index" class="text-danger">
+                                <p class="custom-error">
+                                    {{ error }}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="custom-col-12 my-3">
+                            <button type="submit" class="custom-button" :disabled="loading">Invia</button>
+                            <span v-if="loading" class="custom-loading">Invio in corso...</span>
                         </div>
                     </form>
                 </div>
