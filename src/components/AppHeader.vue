@@ -70,7 +70,7 @@ export default {
                     <div class="collapse navbar-collapse px-5" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item px-3" v-for="(item, index) in menu" :key="index">
-                                <router-link class="nav-link" :to="{ name: item.route_name }">
+                                <router-link class="nav-link text-uppercase" :to="{ name: item.route_name }">
                                     {{ item.label }}
                                 </router-link>
                             </li>
