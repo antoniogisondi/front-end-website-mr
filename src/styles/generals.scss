@@ -1,32 +1,32 @@
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 @import '/node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
-.navbar-custom {
-    background-color: #e35f07;
-}
+// .navbar-custom {
+//     background-color: #e35f07;
+// }
 
-.navbar-custom .navbar-brand {
-    color: #ffffff;
-}
+// .navbar-custom .navbar-brand {
+//     color: #ffffff;
+// }
 
-.navbar-custom .navbar-nav .nav-link {
-    color: #ffffff;
-}
+// .navbar-custom .navbar-nav .nav-link {
+//     color: #ffffff;
+// }
 
-.navbar-custom .navbar-nav .nav-link:hover {
-    background-color: #f39c12;
-    color: #2c3e50;
-}
+// .navbar-custom .navbar-nav .nav-link:hover {
+//     background-color: #f39c12;
+//     color: #2c3e50;
+// }
 
-.navbar-custom .nav-link:hover {
-    background-color: #f39c12;
-    color: #2c3e50;
-    /* Cambia il colore del testo al passaggio del mouse */
-    /* Arancione vivace */
-}
+// .navbar-custom .nav-link:hover {
+//     background-color: #f39c12;
+//     color: #2c3e50;
+//     /* Cambia il colore del testo al passaggio del mouse */
+//     /* Arancione vivace */
+// }
 
 .navbar-custom .logo {
-    max-height: 150px;
+    max-height: 130px;
     /* Altezza massima del logo */
 }
 
