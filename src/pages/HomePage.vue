@@ -4,17 +4,22 @@ export default {
         return {
             slides: [
                 {
-                    img: 'http://www.digimastricostruzioni.it/images/portfolio01B.jpg',
+                    img: 'src/assets/img-1.jpg',
                     title: 'I NOSTRI LAVORI',
                     text: 'lorem ipsum dolor sit amet'
                 },
                 {
-                    img: 'http://www.digimastricostruzioni.it/images/portfolio08B.jpg',
+                    img: 'src/assets/img-2.jpg',
                     title: 'I NOSTRI LAVORI',
                     text: 'lorem ipsum dolor sit amet'
                 },
                 {
-                    img: 'http://www.digimastricostruzioni.it/images/portfolio13B.jpg',
+                    img: 'src/assets/img-3.jpg',
+                    title: 'I NOSTRI LAVORI',
+                    text: 'lorem ipsum dolor sit amet'
+                },
+                {
+                    img: 'src/assets/img-4.jpg',
                     title: 'I NOSTRI LAVORI',
                     text: 'lorem ipsum dolor sit amet'
                 }
