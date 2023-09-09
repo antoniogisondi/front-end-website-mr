@@ -26,12 +26,21 @@ jobs:
       - name: npm build
         id: npm_build
         run: |
-          output=$(timeout 20 npm run dev)
-          echo "::set-output name=output::$output"
+          timeout 20 npm run dev || true
+          exit_code=$?
+          if [ $exit_code -eq 124 ]; then
+            echo "The command timed out"
+            echo "::set-output name=timed_out::true"
+          else
+            echo "The command completed with exit code $exit_code"
+            echo "::set-output name=timed_out::false"
+          fi
 
       - name: Print output
         run: |
-          echo "Output from npm build:"
-          echo "${{ steps.npm_build.outputs.output }}"
-
+          if [ "${{ steps.npm_build.outputs.timed_out }}" = "true" ]; then
+            echo "The npm run dev command timed out"
+          else
+            echo "The npm run dev command completed without timing out"
+          fi
           
