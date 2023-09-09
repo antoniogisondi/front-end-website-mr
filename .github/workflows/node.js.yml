@@ -25,5 +25,5 @@ jobs:
 
       - name: npm build
         run: |
-            testStatus=$(timeout 20 npm run dev)
-            echo $testStatus
+            timeout 20 npm run dev
+          
