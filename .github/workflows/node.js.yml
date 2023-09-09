@@ -1,0 +1,46 @@
+name: my_ci_workflow
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest #operative sys
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      
+      - name: npm install
+        run: npm install
+
+      - name: npm build
+        id: npm_build
+        run: |
+          timeout 20 npm run dev || true
+          exit_code=$?
+          if [ $exit_code -eq 124 ]; then
+            echo "The command timed out"
+            echo "::set-output name=timed_out::true"
+          else
+            echo "The command completed with exit code $exit_code"
+            echo "::set-output name=timed_out::false"
+          fi
+
+      - name: Print output
+        run: |
+          if [ "${{ steps.npm_build.outputs.timed_out }}" = "true" ]; then
+            echo "The npm run dev command timed out"
+          else
+            echo "The npm run dev command completed without timing out"
+          fi
+          
