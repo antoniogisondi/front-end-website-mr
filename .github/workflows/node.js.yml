@@ -25,5 +25,9 @@ jobs:
 
       - name: npm build
         run: |
-            timeout 20 npm run dev
+            output=$(timeout 20 npm run dev)
+            echo "OUTPUT: $output"
+            echo "OUTPUT_VAR::$output" >> $GITHUB_ENV
+
+
           
