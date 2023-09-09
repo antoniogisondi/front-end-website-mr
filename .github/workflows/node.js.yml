@@ -24,10 +24,14 @@ jobs:
         run: npm install
 
       - name: npm build
+        id: npm_build
         run: |
-            output=$(timeout 20 npm run dev)
-            echo "OUTPUT: $output"
-            echo "OUTPUT_VAR::$output" >> $GITHUB_ENV
+          output=$(timeout 20 npm run dev)
+          echo "::set-output name=output::$output"
 
+      - name: Print output
+        run: |
+          echo "Output from npm build:"
+          echo "${{ steps.npm_build.outputs.output }}"
 
           
