@@ -1,8 +1,26 @@
 <script>
+import axios from 'axios';
 export default {
     data() {
         return {
-
+            baseUrl: 'http://127.0.0.1:8000',
+            works: [],
+            message: ''
+        }
+    },
+    created() {
+        this.getWorks()
+    },
+    methods: {
+        getWorks() {
+            axios.get(`${this.baseUrl}/api/works`).then((response) => {
+                if (this.works) {
+                    this.works = response.data.results
+                }
+                else {
+                    this.message = 'Nessun lavoro trovato'
+                }
+            })
         }
     },
 }
@@ -19,28 +37,13 @@ export default {
             </div>
             <div class="custom-row">
                 <div class="custom-col">
-                    <div class="custom-project">
-                        <h2 class="custom-project-title">Villa Moderna sul Lago</h2>
-                        <p class="custom-project-description">Una villa moderna con design innovativo e una vista mozzafiato
-                            sul lago.</p>
-                    </div>
-                    <div class="custom-project">
-                        <h2 class="custom-project-title">Ristrutturazione Loft Urbano</h2>
-                        <p class="custom-project-description">Il recupero di uno spazio urbano in un loft moderno e
-                            funzionale.</p>
-                    </div>
-                    <div class="custom-project">
-                        <h2 class="custom-project-title">Edificio Commerciale Centro Città</h2>
-                        <p class="custom-project-description">Un edificio commerciale nel cuore della città, progettato per
-                            massimizzare la visibilità e l'accessibilità.</p>
-                    </div>
-                    <div class="custom-project">
-                        <h2 class="custom-project-title">Casa Rurale Tradizionale</h2>
-                        <p class="custom-project-description">Un restauro attento di una casa rurale con materiali
-                            tradizionali e comfort moderni.</p>
+                    <div class="custom-project" v-for="work in works" :key="work.id">
+                        <h2 class="custom-project-title">{{ work.titolo }}</h2>
+                        <p class="custom-project-description">{{ work.descrizione }}</p>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
-</div></template>
+</template>
 <style lang="scss"></style>

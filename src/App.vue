@@ -1,19 +1,29 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppLoader from './components/AppLoader.vue';
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppLoader
   },
   data() {
     return {
-
+      loading: true,
+      loader: false
     }
+  },
+  created() {
+    setTimeout(() => {
+      this.loading = false,
+        this.loader = true
+    }, 2500)
   },
 }
 </script>
 
 <template>
-  <AppHeader />
+  <AppLoader v-if="loading" />
+  <AppHeader v-else-if="loader" />
   <router-view></router-view>
 </template>
 
