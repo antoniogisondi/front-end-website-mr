@@ -1,8 +1,26 @@
 <script>
+import axios from 'axios';
 export default {
     data() {
         return {
-
+            services: [],
+            baseUrl: 'http://127.0.0.1:8000',
+            message: ''
+        }
+    },
+    created() {
+        this.getServices()
+    },
+    methods: {
+        getServices() {
+            axios.get(`${this.baseUrl}/api/services`).then((response) => {
+                if (this.services) {
+                    this.services = response.data.results
+                }
+                else {
+                    this.message = 'Nessun servizio trovato'
+                }
+            })
         }
     },
 }
@@ -19,10 +37,9 @@ export default {
             </div>
             <div class="custom-row">
                 <div class="custom-col">
-                    <div class="custom-service">
-                        <h2 class="custom-service-title">Costruzioni Residenziali e Commerciali</h2>
-                        <p class="custom-service-description">Realizziamo nuove costruzioni residenziali e commerciali con
-                            materiali di alta qualità e attenzione ai dettagli.</p>
+                    <div class="custom-service" v-for="service in services" :key="service.id">
+                        <h2 class="custom-service-title">{{ service.titolo }}</h2>
+                        <p class="custom-service-description">{{ service.descrizione }}</p>
                     </div>
                     <div class="custom-service">
                         <h2 class="custom-service-title">Ristrutturazioni e Restauri</h2>
@@ -41,6 +58,7 @@ export default {
                     </div>
                 </div>
             </div>
+        </div>
     </div>
-</div></template>
+</template>
 <style lang="scss"></style>
