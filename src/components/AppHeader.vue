@@ -2,33 +2,6 @@
 export default {
     data() {
         return {
-            menu: [
-                {
-                    label: 'Home',
-                    route_name: 'homepage'
-                },
-                {
-                    label: 'Servizi',
-                    route_name: 'services'
-                },
-                {
-                    label: 'Progetti',
-                    route_name: 'projects'
-                },
-                {
-                    label: 'Chi siamo',
-                    route_name: 'about_us'
-                },
-                {
-                    label: 'Contattaci',
-                    route_name: 'contact_us'
-                },
-                {
-                    label: 'Blog',
-                    route_name: 'blog'
-                }
-            ]
-
 
         }
     },

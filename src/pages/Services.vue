@@ -41,21 +41,6 @@ export default {
                         <h2 class="custom-service-title">{{ service.titolo }}</h2>
                         <p class="custom-service-description">{{ service.descrizione }}</p>
                     </div>
-                    <div class="custom-service">
-                        <h2 class="custom-service-title">Ristrutturazioni e Restauri</h2>
-                        <p class="custom-service-description">Ristrutturiamo ed effettuiamo restauri conservativi di edifici
-                            antichi, garantendo il recupero e la valorizzazione degli spazi.</p>
-                    </div>
-                    <div class="custom-service">
-                        <h2 class="custom-service-title">Impianti Elettrici e Idraulici</h2>
-                        <p class="custom-service-description">Realizziamo impianti elettrici e idraulici efficienti e
-                            sicuri, conformi alle normative vigenti.</p>
-                    </div>
-                    <div class="custom-service">
-                        <h2 class="custom-service-title">Progettazione e Consulenza</h2>
-                        <p class="custom-service-description">Offriamo servizi di progettazione architettonica e consulenza
-                            tecnica per assicurarti risultati di alto livello.</p>
-                    </div>
                 </div>
             </div>
         </div>

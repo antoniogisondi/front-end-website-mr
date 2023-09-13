@@ -6,6 +6,9 @@ import AboutUs from '../pages/AboutUs.vue';
 import ContactUs from '../pages/ContactUs.vue';
 import Blog from '../pages/Blog.vue';
 import ThankYou from '../pages/ThankYou.vue';
+import NewConstructions from '../pages/NewConstructions.vue';
+import Renovations from '../pages/Renovations.vue';
+import Restorations from '../pages/Restorations.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -44,6 +47,22 @@ const router = createRouter({
             path: '/thank-you',
             name: 'thank_you',
             component: ThankYou
+        },
+        {
+            path: '/new-constructions',
+            name: 'new_constructions',
+            component: NewConstructions
+        },
+        {
+            path: '/renovations',
+            name: 'renovations',
+            component: Renovations
+
+        },
+        {
+            path: '/restorations',
+            name: 'restorations',
+            component: Restorations
         },
     ]
 });

@@ -2,14 +2,14 @@
 import AboutUs from '../pages/AboutUs.vue';
 import Services from '../pages/Services.vue';
 import Projects from '../pages/Projects.vue';
-import ContactUs from '../pages/ContactUs.vue';
+import Contacts from '../pages/Contacts.vue';
 import Blog from '../pages/Blog.vue';
 export default {
     components: {
         AboutUs,
         Services,
         Projects,
-        ContactUs,
+        Contacts,
         Blog
     },
     data() {
@@ -35,7 +35,7 @@ export default {
     <AboutUs />
     <Projects />
     <Services />
-    <ContactUs />
+    <Contacts />
 </template>
 <style lang="scss">
 .image {

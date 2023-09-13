@@ -12,11 +12,6 @@
     /* Altezza massima del logo */
 }
 
-.card {
-    margin-top: 20px;
-    /* Spazio tra le card */
-}
-
 .container-custom {
     background-color: rgba(13, 39, 28, 255);
     width: 100%;
@@ -35,6 +30,37 @@
 
 .container-custom-project {
     background-color: rgba(235, 235, 235, 255);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.card-size {
+    width: 25rem;
+    position: relative;
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+
+        h3 {
+            color: white;
+        }
+    }
+}
+
+.card-size-contacts {
+    img {
+        width: 35rem;
+    }
+}
+
+.container-custom-contacts {
+    background-color: rgba(20, 20, 18, 255);
     width: 100%;
     margin: 0 auto;
     padding: 50px 0;
@@ -67,10 +93,6 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-}
-
-.custom-col {
-    flex: 1;
 }
 
 .custom-heading {
