@@ -22,11 +22,17 @@ export default {
 </script>
 
 <template>
-  <AppLoader v-if="loading" />
-  <AppHeader v-else-if="loader" />
-  <router-view></router-view>
+  <div class="main-component">
+    <AppLoader v-if="loading" />
+    <AppHeader v-else-if="loader" />
+    <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss">
 @use './styles/generals.scss' as *;
+
+.main-component {
+  position: relative;
+}
 </style>
