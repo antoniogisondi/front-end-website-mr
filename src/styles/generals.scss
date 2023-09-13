@@ -12,24 +12,46 @@
     /* Altezza massima del logo */
 }
 
-.container-fluid {
-    background-color: #f8f9fa;
-    /* Colore di sfondo grigio chiaro */
-}
-
-.list-group-item {
-    background-color: #fff;
-    /* Colore di sfondo bianco per gli elementi della lista */
-}
-
 .card {
     margin-top: 20px;
     /* Spazio tra le card */
 }
 
-.custom-container {
+.container-custom {
+    background-color: rgba(13, 39, 28, 255);
     width: 100%;
-    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container-custom-about-us {
+    background-color: rgba(235, 235, 235, 255);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container-custom-project {
+    background-color: rgba(235, 235, 235, 255);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container-custom-contact-us {
+    background-color: rgba(20, 20, 18, 255);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container-custom-service {
+    background-color: rgba(207, 206, 212, 255);
+    width: 100%;
     margin: 0 auto;
     padding: 50px 0;
     text-align: center;

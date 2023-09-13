@@ -33,8 +33,8 @@ export default {
         </div>
     </div>
     <AboutUs />
-    <Services />
     <Projects />
+    <Services />
     <ContactUs />
 </template>
 <style lang="scss">
