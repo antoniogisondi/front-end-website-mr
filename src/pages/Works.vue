@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios';
 export default {
+    props: ['slug'],
     data() {
         return {
             baseUrl: 'http://127.0.0.1:8000',
@@ -9,16 +10,16 @@ export default {
         }
     },
     created() {
-        this.getWorks()
+        this.getWorks(this.slug)
     },
     methods: {
-        getWorks() {
-            axios.get(`${this.baseUrl}/api/works`).then((response) => {
-                if (this.works) {
-                    this.works = response.data.results
+        getWorks(slug) {
+            axios.get(`${this.baseUrl}/api/works/${slug}`).then((response) => {
+                if (response.data.success) {
+                    this.works = response.data.results;
                 }
                 else {
-                    this.message = 'Nessun lavoro trovato'
+                    this.$router.push({ name: 'thank-you' });
                 }
             })
         }
@@ -27,7 +28,6 @@ export default {
 </script>
 <template>
     <div>
-        <h1>Nuove Costruzioni</h1>
         <div class="custom-row">
             <div class="custom-col">
                 <div class="custom-project" v-for="   work    in    works   " :key="work.id">

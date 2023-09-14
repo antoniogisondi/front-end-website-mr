@@ -1,30 +1,24 @@
 <script>
-
+import axios from 'axios';
+import { store } from '../data/store';
 export default {
     data() {
         return {
-
-
-            cards: [
-                {
-                    name: 'Nuove Costruzioni',
-                    img_path: 'src/assets/logo-edifici.jpg',
-                    title: 'Nuove Costruzioni',
-                    route_name: 'new_constructions'
-                },
-                {
-                    name: 'Ristrutturazioni',
-                    img_path: 'src/assets/logo-ristrutturazioni.jpg',
-                    title: 'Ristrutturazioni',
-                    route_name: 'renovations'
-                },
-                {
-                    name: 'Restauri',
-                    img_path: 'src/assets/logo-costruzioni.jpg',
-                    title: 'Restauri',
-                    route_name: 'restorations'
-                },
-            ]
+            store,
+            types: [],
+        }
+    },
+    created() {
+        this.getWorksByType()
+    },
+    methods: {
+        getWorksByType() {
+            axios.get(`${this.store.baseUrl}/api/types`).then((response) => {
+                this.types = response.data.results;
+            })
+                .catch(error => {
+                    console.error('Errore nella richiesta API:', error);
+                });
         }
     },
 }
@@ -37,14 +31,16 @@ export default {
                     <h1 class="custom-heading">I Nostri Progetti</h1>
                 </div>
                 <div class="custom-col-card d-flex flex-row justify-content-center">
-                    <div class="card card-size mx-4" v-for="(card, index) in cards" :key="index">
-                        <img :src="card.img_path" class="card-img-top" :alt="card.name">
-                        <div class="card-body">
-                            <router-link class="btn btn-outline-info" :to="{ name: card.route_name }">SCOPRI DI
-                                PIU'</router-link>
+                    <div class="card card-size mx-4" v-for="(type, index) in types" :key="index">
+                        <img src="../assets/logo-costruzioni.jpg" alt="logo">
+                        <div class="card-body d-flex justify-content-center">
+                            <router-link class="btn btn-sm btn-outline-info"
+                                :to="{ name: 'works', params: { slug: type.slug } }">
+                                SCOPRI DI PIU'
+                            </router-link>
                         </div>
                         <div class="text">
-                            <h3>{{ card.title }}</h3>
+                            <h3>{{ type.nome_tipologia }}</h3>
                         </div>
                     </div>
                 </div>
