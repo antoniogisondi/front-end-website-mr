@@ -22,7 +22,7 @@ export default {
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 p-0 image">
+            <div class="col-12 col-md-6 p-0 image">
                 <img src="../assets/bg-mr.jpg" alt="logo">
                 <div class="absolute">
                     <p>
@@ -49,7 +49,8 @@ export default {
     .absolute {
         position: absolute;
         top: 50%;
-        left: 65%;
+        left: 230%;
+        transform: translate(-230%, -50%);
 
         p {
             font-size: 50px;
