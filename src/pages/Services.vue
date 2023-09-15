@@ -1,10 +1,11 @@
 <script>
 import axios from 'axios';
+import { store } from '../data/store';
 export default {
     data() {
         return {
+            store,
             services: [],
-            baseUrl: 'http://127.0.0.1:8000',
             message: ''
         }
     },
@@ -13,7 +14,7 @@ export default {
     },
     methods: {
         getServices() {
-            axios.get(`${this.baseUrl}/api/services`).then((response) => {
+            axios.get(`${this.store.baseUrl}/api/services`).then((response) => {
                 if (this.services) {
                     this.services = response.data.results
                 }
