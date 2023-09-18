@@ -19,8 +19,8 @@ export default {
                 .catch(error => {
                     console.error('Errore nella richiesta API:', error);
                 });
-        }
-    },
+        },
+    }
 }
 </script>
 <template>
@@ -32,8 +32,15 @@ export default {
                 </div>
                 <div class="custom-col-card d-flex flex-row justify-content-center">
                     <div class="card card-size mx-4" v-for="(type, index) in types" :key="index">
-                        <img src="../assets/logo-costruzioni.jpg" alt="logo">
-                        <div class="card-body d-flex justify-content-center">
+                        <img v-if="type.cover_image" :src="`${this.store.baseUrl}/storage/${type.cover_image}`"
+                            :alt="type.slug">
+                        <img v-else src="../assets/logo-mr.png" alt="logo">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <div class="card-text">
+                                <p>
+                                    {{ type.descrizione }}
+                                </p>
+                            </div>
                             <router-link class="btn btn-sm btn-outline-info"
                                 :to="{ name: 'works', params: { slug: type.slug } }">
                                 SCOPRI DI PIU'

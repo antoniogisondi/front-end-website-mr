@@ -12,7 +12,7 @@ export default {
     <header class="container-fluid mx-0 header-component">
         <div class="row position-relative">
             <div class="col px-0 position-absolute">
-                <nav class="navbar navbar-expand-lg navbar-dark px-5">
+                <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3">
                     <router-link class="navbar-brand navbar-custom" :to="{ name: 'homepage' }">
                         <img src="../assets/logo-mr.png" alt="Logo Azienda Edile" class="logo">
                     </router-link>
