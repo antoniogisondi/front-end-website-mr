@@ -27,18 +27,18 @@ export default {
 }
 </script>
 <template>
-    <div class="container-custom">
+    <div class="container-custom-service">
         <div class="custom-content">
-            <div class="custom-row">
-                <div class="custom-col">
+            <div class="row">
+                <div class="col-12">
                     <h1 class="custom-heading">I Nostri Servizi</h1>
                     <p class="custom-description">Scopri tutti i servizi di qualità che offriamo per realizzare i tuoi
                         progetti edili.</p>
                 </div>
             </div>
-            <div class="custom-row">
-                <div class="custom-col">
-                    <div class="custom-service" v-for="service in services" :key="service.id">
+            <div class="row">
+                <div class="col-12" v-for="service in services" :key="service.id">
+                    <div class="custom-service mb-4">
                         <h2 class="custom-service-title">{{ service.titolo }}</h2>
                         <p class="custom-service-description">{{ service.descrizione }}</p>
                     </div>
@@ -47,4 +47,5 @@ export default {
         </div>
     </div>
 </template>
+
 <style lang="scss"></style>

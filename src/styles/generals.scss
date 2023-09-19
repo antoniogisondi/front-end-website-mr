@@ -7,21 +7,23 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container-custom,
 .container-custom-about-us,
 .container-custom-project,
 .container-custom-contacts,
 .container-custom-contact-us,
 .container-custom-service {
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
     text-align: center;
 }
 
 .custom-content {
+    max-width: 100%;
     margin: 0 auto;
-    max-width: 800px;
+    /* Centra il contenuto */
 }
 
 .custom-row {
@@ -29,6 +31,8 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    width: 100%;
+    /* Rendi la row larga quanto la viewport */
 }
 
 .custom-col {
@@ -46,7 +50,8 @@
 .custom-paragraph {
     font-size: 1.2em;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    /* Aggiunto spazio tra i paragrafi */
 }
 
 .custom-subheading {
@@ -60,6 +65,13 @@
 .custom-blog-post {
     text-align: left;
     margin-bottom: 30px;
+    width: 100%;
+    /* Rendi il contenuto del blocco largo quanto la viewport */
+    max-width: 1200px;
+    /* Imposta una larghezza massima */
+    margin-left: auto;
+    margin-right: auto;
+    /* Centra il blocco */
 }
 
 .custom-service-title,
@@ -75,10 +87,14 @@
 .custom-blog-description {
     font-size: 1em;
     color: #555;
+    margin-bottom: 15px;
+    /* Aggiunto spazio tra i paragrafi */
 }
 
 .custom-container {
-    max-width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    /* Centra il contenuto */
 }
 
 .custom-label {
@@ -135,12 +151,8 @@
     margin-bottom: 5px;
 }
 
-.navbar-custom .logo {
-    max-height: 250px;
-}
-
 .card-size {
-    width: 25rem;
+    width: 18rem;
     position: relative;
 
     .text {
@@ -154,10 +166,6 @@
             color: white;
         }
     }
-}
-
-.card-size-contacts img {
-    width: 35rem;
 }
 
 .container-custom,
@@ -218,6 +226,8 @@
     .custom-project-description {
         font-size: 1em;
         color: #555;
+        margin-bottom: 15px;
+        /* Aggiunto spazio tra i paragrafi */
     }
 }
 

@@ -26,26 +26,26 @@ export default {
 <template>
     <div class="container-custom-project">
         <div class="custom-content-card">
-            <div class="custom-row-card">
-                <div class="col-12">
+            <div class="row">
+                <div class="col-12 my-5">
                     <h1 class="custom-heading">I Nostri Progetti</h1>
                 </div>
-                <div class="custom-col-card d-flex flex-row justify-content-center">
-                    <div class="card card-size mx-4" v-for="(type, index) in types" :key="index">
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center flex-wrap">
+                    <div class="card card-size mb-4 mx-5" v-for="(type, index) in types" :key="index">
+                        <!-- Immagine -->
                         <img v-if="type.cover_image" :src="`${this.store.baseUrl}/storage/${type.cover_image}`"
-                            :alt="type.slug">
-                        <img v-else src="../assets/logo-mr.png" alt="logo">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <div class="card-text">
-                                <p>
-                                    {{ type.descrizione }}
-                                </p>
-                            </div>
+                            :alt="type.slug" class="img-fluid card-img-top">
+                        <img v-else src="../assets/logo-mr.png" alt="logo" class="img-fluid card-img-top">
+
+                        <!-- Testo della card -->
+                        <div class="card-body text-center">
                             <router-link class="btn btn-sm btn-outline-info"
-                                :to="{ name: 'works', params: { slug: type.slug } }">
-                                SCOPRI DI PIU'
-                            </router-link>
+                                :to="{ name: 'works', params: { slug: type.slug } }">SCOPRI DI PIU'</router-link>
                         </div>
+
+                        <!-- Testo sovrapposto -->
                         <div class="text">
                             <h3>{{ type.nome_tipologia }}</h3>
                         </div>
@@ -55,4 +55,5 @@ export default {
         </div>
     </div>
 </template>
+
 <style lang="scss"></style>
