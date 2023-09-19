@@ -7,129 +7,13 @@
     box-sizing: border-box;
 }
 
-.navbar-custom .logo {
-    max-height: 250px;
-    /* Altezza massima del logo */
-}
-
-.container-custom {
-    background-color: rgba(13, 39, 28, 255);
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.container-custom-about-us {
-    background-color: rgba(235, 235, 235, 255);
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.container-custom-project {
-    background-color: rgba(235, 235, 235, 255);
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.card-size {
-    width: 25rem;
-    position: relative;
-
-    .text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-
-        h3 {
-            color: white;
-        }
-    }
-}
-
-.card-size-contacts {
-    img {
-        width: 35rem;
-    }
-}
-
-.container-custom-contacts {
-    background-color: rgba(20, 20, 18, 255);
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.container-custom-contact-us {
-    background-color: rgba(20, 20, 18, 255);
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
+.container-custom,
+.container-custom-about-us,
+.container-custom-project,
+.container-custom-contacts,
+.container-custom-contact-us,
 .container-custom-service {
-    background-color: rgba(207, 206, 212, 255);
     width: 100%;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.custom-content {
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.custom-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.custom-heading {
-    font-size: 2.5em;
-    color: #333;
-    /* Colore del testo */
-    margin-bottom: 20px;
-}
-
-.custom-description {
-    font-size: 1.2em;
-    color: #555;
-    /* Colore del testo */
-    margin-bottom: 30px;
-}
-
-.custom-service {
-    text-align: left;
-    margin-bottom: 30px;
-}
-
-.custom-service-title {
-    font-size: 1.8em;
-    color: #333;
-    /* Colore del testo */
-    margin-bottom: 10px;
-}
-
-.custom-service-description {
-    font-size: 1em;
-    color: #555;
-    /* Colore del testo */
-}
-
-.custom-container {
-    width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 50px 0;
     text-align: center;
@@ -154,116 +38,52 @@
 .custom-heading {
     font-size: 2.5em;
     color: #333;
-    /* Colore del testo */
-    margin-bottom: 20px;
-}
-
-.custom-description {
-    font-size: 1.2em;
-    color: #555;
-    /* Colore del testo */
-    margin-bottom: 30px;
-}
-
-.custom-project {
-    text-align: left;
-    margin-bottom: 30px;
-}
-
-.custom-project-title {
-    font-size: 1.8em;
-    color: #333;
-    /* Colore del testo */
-    margin-bottom: 10px;
-}
-
-.custom-project-description {
-    font-size: 1em;
-    color: #555;
-    /* Colore del testo */
-}
-
-.custom-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.custom-content {
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.custom-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.custom-col {
-    flex: 1;
-}
-
-.custom-heading {
-    font-size: 2.5em;
-    color: #333;
-    /* Colore del testo */
     margin-bottom: 20px;
 }
 
 .custom-description,
-.custom-subdescription {
+.custom-subdescription,
+.custom-paragraph {
     font-size: 1.2em;
     color: #555;
-    /* Colore del testo */
     margin-bottom: 30px;
 }
 
 .custom-subheading {
     font-size: 1.8em;
     color: #333;
-    /* Colore del testo */
     margin-bottom: 10px;
 }
 
-.custom-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.custom-content {
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.custom-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.custom-service,
+.custom-project,
+.custom-blog-post {
+    text-align: left;
     margin-bottom: 30px;
 }
 
-.custom-col {
-    flex: 1;
+.custom-service-title,
+.custom-project-title,
+.custom-blog-title {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.custom-heading {
-    font-size: 2.5em;
-    color: #333;
-    /* Colore del testo */
-    margin-bottom: 20px;
+.custom-service-description,
+.custom-project-description,
+.custom-blog-description {
+    font-size: 1em;
+    color: #555;
+}
+
+.custom-container {
+    max-width: 1200px;
 }
 
 .custom-label {
     font-size: 1em;
     color: #333;
-    /* Colore del testo */
     margin-bottom: 5px;
 }
 
@@ -296,17 +116,11 @@
     cursor: not-allowed;
 }
 
-.custom-error {
+.custom-error,
+.custom-loading,
+.custom-blog-date {
     font-size: 0.8em;
     color: #dc3545;
-    /* Colore del testo */
-    margin-top: 5px;
-}
-
-.custom-loading {
-    font-size: 1em;
-    color: #333;
-    /* Colore del testo */
     margin-top: 5px;
 }
 
@@ -315,73 +129,117 @@
     margin-top: 5em;
 }
 
-.custom-heading {
-    font-size: 2.5em;
-    color: #333;
-    /* Colore del testo */
-    margin-bottom: 20px;
-}
-
-.custom-paragraph {
-    font-size: 1.2em;
+.custom-blog-date {
+    font-size: 1em;
     color: #555;
-    /* Colore del testo */
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
-.custom-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 0;
-    text-align: center;
+.navbar-custom .logo {
+    max-height: 250px;
 }
 
-.custom-content {
-    margin: 0 auto;
-    max-width: 800px;
+.card-size {
+    width: 25rem;
+    position: relative;
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+
+        h3 {
+            color: white;
+        }
+    }
 }
 
-.custom-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+.card-size-contacts img {
+    width: 35rem;
 }
 
-.custom-col {
-    flex: 1;
+.container-custom,
+.container-custom-about-us,
+.container-custom-project,
+.container-custom-contacts,
+.container-custom-contact-us,
+.container-custom-service {
+    background-color: rgba(13, 39, 28, 255);
 }
 
-.custom-heading {
-    font-size: 2.5em;
-    color: #333;
-    /* Colore del testo */
-    margin-bottom: 20px;
+.container-custom-contacts,
+.container-custom-contact-us {
+    background-color: rgba(20, 20, 18, 255);
+}
+
+.container-custom-about-us,
+.container-custom-project {
+    background-color: rgba(235, 235, 235, 255);
 }
 
 .custom-blog-post {
     text-align: left;
     margin-bottom: 30px;
+
+    .custom-blog-title {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .custom-blog-date {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .custom-blog-description {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 20px;
+    }
 }
 
-.custom-blog-title {
-    font-size: 1.8em;
-    color: #333;
-    /* Colore del testo */
-    margin-bottom: 10px;
+.custom-service,
+.custom-project {
+    text-align: left;
+    margin-bottom: 30px;
+
+    .custom-service-title,
+    .custom-project-title {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .custom-service-description,
+    .custom-project-description {
+        font-size: 1em;
+        color: #555;
+    }
 }
 
-.custom-blog-date {
+.custom-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.custom-error,
+.custom-loading {
     font-size: 1em;
-    color: #555;
-    /* Colore del testo */
-    margin-bottom: 5px;
+    color: #333;
+    margin-top: 5px;
 }
 
-.custom-blog-description {
-    font-size: 1.2em;
-    color: #555;
-    /* Colore del testo */
-    margin-bottom: 20px;
+.custom-service,
+.custom-project,
+.custom-blog-post {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.card-size img {
+    width: 35rem;
 }
