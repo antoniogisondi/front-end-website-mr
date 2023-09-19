@@ -27,7 +27,7 @@ export default {
 }
 </script>
 <template>
-    <div class="container-custom">
+    <div class="container-custom-service">
         <div class="custom-content">
             <div class="custom-row">
                 <div class="custom-col">

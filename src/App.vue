@@ -16,16 +16,10 @@ export default {
 </script>
 
 <template>
-  <div class="main-component">
-    <AppHeader />
-  </div>
+  <AppHeader />
   <router-view></router-view>
 </template>
 
 <style lang="scss">
 @use './styles/generals.scss' as *;
-
-.main-component {
-  position: relative;
-}
 </style>

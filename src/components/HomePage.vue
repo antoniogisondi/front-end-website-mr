@@ -1,10 +1,10 @@
 <script>
-import Services from '../pages/Services.vue';
+import ServicesHome from '../pages/ServicesHome.vue';
 import Projects from '../pages/Projects.vue';
 import Blog from '../pages/Blog.vue';
 export default {
     components: {
-        Services,
+        ServicesHome,
         Projects,
         Blog
     },
@@ -54,7 +54,7 @@ export default {
             </div>
         </div>
     </div>
-    <Services />
+    <ServicesHome />
     <Projects />
     <div class="container-custom-contacts">
         <div class="custom-content">
