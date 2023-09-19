@@ -1,4 +1,6 @@
 <script>
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 import Services from '../pages/Services.vue';
 import Projects from '../pages/Projects.vue';
 import Blog from '../pages/Blog.vue';
@@ -12,6 +14,9 @@ export default {
         return {
 
         }
+    },
+    mounted() {
+        AOS.init();
     }
 }
 </script>
@@ -29,14 +34,14 @@ export default {
     </div>
     <div class="container-custom-about-us pt-5">
         <div class="custom-content">
-            <div class="custom-row">
+            <div data-aos="fade-right" class="custom-row">
                 <div class="custom-col">
                     <h1 class="custom-heading">Chi Siamo</h1>
                     <p class="custom-description">Siamo un'azienda edile con una lunga tradizione di eccellenza nel settore
                         delle costruzioni. Scopri di più su di noi e sulla nostra missione.</p>
                 </div>
             </div>
-            <div class="custom-row">
+            <div data-aos="fade-left" class="custom-row">
                 <div class="custom-col">
                     <h2 class="custom-subheading">La Nostra Missione</h2>
                     <p class="custom-subdescription">La nostra missione è fornire soluzioni edili di alta qualità che
@@ -44,7 +49,7 @@ export default {
                         professionalità e attenzione ai dettagli.</p>
                 </div>
             </div>
-            <div class="custom-row">
+            <div data-aos="fade-right" class="custom-row">
                 <div class="custom-col">
                     <h2 class="custom-subheading">La Nostra Storia</h2>
                     <p class="custom-subdescription">Da oltre 20 anni operiamo nel settore edile, realizzando progetti di
