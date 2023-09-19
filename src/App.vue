@@ -18,8 +18,8 @@ export default {
 <template>
   <div class="main-component">
     <AppHeader />
-    <router-view></router-view>
   </div>
+  <router-view></router-view>
 </template>
 
 <style lang="scss">
