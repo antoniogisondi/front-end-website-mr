@@ -1,8 +1,6 @@
-FROM node:lts-alpine
+FROM alpine:3.9 as build-stage
 
-RUN npm install -g http-server
-
-WORKDIR /
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -10,6 +8,16 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8080
+RUN npm run deploy-{mode}
 
-CMD [ "http-server", "dist" ]
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d
+
+EXPOSE 80
+
+#start nginx and keep the process from backgrounding and the container from quitting
+
+CMD ["nginx", "-g", "daemon off;"]
