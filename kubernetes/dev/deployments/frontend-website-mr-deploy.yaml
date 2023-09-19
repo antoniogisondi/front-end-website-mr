@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-website-mr
+  labels:
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend-website-mr
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: frontend-website-mr
+        tier: backend
+    spec:
+      containers:
+      - name: frontend-website-mr
+        image: standalonealliance/frontend-website-mr:latest
+        ports:
+        - containerPort: 8080
