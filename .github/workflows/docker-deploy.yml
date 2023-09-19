@@ -6,7 +6,7 @@ on:
     branches:
       - main
       - feat/docker-container
-# comment
+
 env:
   IMAGE_NAME: frontend-website-mr
   REGISTRY: docker.io
