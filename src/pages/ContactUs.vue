@@ -48,58 +48,60 @@ export default {
 }
 </script>
 <template>
-    <div class="container-custom-contact-us">
-        <div class="custom-content">
-            <div class="custom-row">
-                <div class="custom-col">
-                    <h1 class="custom-heading">Contattaci</h1>
-                </div>
+    <div class="container container-custom-contact-us">
+        <div class="row">
+            <div class="col">
+                <h1 class="heading">Contattaci</h1>
             </div>
-            <div class="custom-row">
-                <div class="custom-col">
-                    <form @submit.prevent="sendMail()" class="row">
-                        <div class="custom-col-12 custom-col-md-6 my-3">
-                            <label for="name" class="custom-label">Nome e Cognome</label>
-                            <input type="text" name="name" id="name" v-model="name" class="custom-input"
-                                placeholder="Nome e Cognome" :class="errors.name ? 'is-invalid' : ''">
-                            <div v-for="(error, index) in errors.name" :key="index" class="text-danger">
-                                <p class="custom-error">
-                                    {{ error }}
-                                </p>
-                            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form @submit.prevent="sendMail()" class="row">
+                    <div class="col-12">
+                        <label for="name" class="custom-label">Nome e Cognome</label>
+                        <input type="text" name="name" id="name" v-model="name" class="custom-input"
+                            placeholder="Nome e Cognome" :class="errors.name ? 'is-invalid' : ''">
+                        <div v-for="(error, index) in errors.name" :key="index" class="text-danger">
+                            <p class="custom-error">
+                                {{ error }}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="custom-col-12 custom-col-md-6 my-3">
-                            <label for="email" class="custom-label">Email</label>
-                            <input type="text" name="email" id="email" v-model="email" class="custom-input"
-                                placeholder="email@example.com" :class="errors.email ? 'is-invalid' : ''">
-                            <div v-for="(error, index) in errors.email" :key="index" class="text-danger">
-                                <p class="custom-error">
-                                    {{ error }}
-                                </p>
-                            </div>
+                    <div class="col-12">
+                        <label for="email" class="custom-label">Email</label>
+                        <input type="text" name="email" id="email" v-model="email" class="custom-input"
+                            placeholder="email@example.com" :class="errors.email ? 'is-invalid' : ''">
+                        <div v-for="(error, index) in errors.email" :key="index" class="text-danger">
+                            <p class="custom-error">
+                                {{ error }}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="custom-col-12 my-3">
-                            <label for="message" class="custom-label">Messaggio</label>
-                            <textarea name="message" id="message" v-model="message" class="custom-textarea"
-                                placeholder="Messaggio" :class="errors.content ? 'is-invalid' : ''"></textarea>
-                            <div v-for="(error, index) in errors.description" :key="index" class="text-danger">
-                                <p class="custom-error">
-                                    {{ error }}
-                                </p>
-                            </div>
+                    <div class="col-12">
+                        <label for="message" class="custom-label">Messaggio</label>
+                        <textarea name="message" id="message" v-model="message" class="custom-textarea"
+                            placeholder="Messaggio" :class="errors.content ? 'is-invalid' : ''"></textarea>
+                        <div v-for="(error, index) in errors.description" :key="index" class="text-danger">
+                            <p class="custom-error">
+                                {{ error }}
+                            </p>
                         </div>
+                    </div>
 
-                        <div class="custom-col-12 my-3">
-                            <button v-if="loading" type="submit" class="custom-button" :disabled="loading">Invio in
-                                corso...</button>
-                            <button v-else class="custom-button">Invio</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="col-12">
+                        <button v-if="loading" type="submit" class="custom-button" :disabled="loading">Invio in
+                            corso...</button>
+                        <button v-else class="custom-button">Invio</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+.container-custom-contact-us {
+    background-color: rgba(20, 20, 18, 255);
+}
+</style>

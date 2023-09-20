@@ -22,10 +22,10 @@ export default {
 </script>
 <template>
     <div class="container-fluid p-0">
-        <div class="container-image">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center align-items-center">
-                    <div class="text text-center">
+        <div class="container px-0 mx-0 container-image">
+            <div class="row mx-0">
+                <div class="col-12">
+                    <div class="text">
                         <p>
                             Una costruzione con cui puoi stare bene
                         </p>
@@ -33,53 +33,49 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="container-custom-about-us pt-md-5">
-            <div class="custom-content">
-                <div data-aos="fade-right" class="row custom-row">
-                    <div class="col-12 my-3">
-                        <h1 class="custom-heading">Chi Siamo</h1>
-                        <p class="custom-description">Siamo un'azienda edile con una lunga tradizione di eccellenza nel
-                            settore
-                            delle costruzioni. Scopri di più su di noi e sulla nostra missione.</p>
-                    </div>
+        <div class="container px-0 mx-0 container-custom-about-us">
+            <div data-aos="fade-right" class="row mx-0">
+                <div class="col-12">
+                    <h1 class="custom-heading">Chi Siamo</h1>
+                    <p class="custom-description">Siamo un'azienda edile con una lunga tradizione di eccellenza nel
+                        settore
+                        delle costruzioni. Scopri di più su di noi e sulla nostra missione.</p>
                 </div>
-                <div data-aos="fade-left" class="row custom-row">
-                    <div class="col-12 my-3">
-                        <h2 class="custom-subheading">La Nostra Missione</h2>
-                        <p class="custom-subdescription">La nostra missione è fornire soluzioni edili di alta qualità che
-                            soddisfino
-                            le esigenze e le aspettative dei nostri clienti, garantendo sempre la massima professionalità e
-                            attenzione
-                            ai dettagli.</p>
-                    </div>
+            </div>
+            <div data-aos="fade-left" class="row mx-0">
+                <div class="col-12">
+                    <h2 class="custom-subheading">La Nostra Missione</h2>
+                    <p class="custom-subdescription">La nostra missione è fornire soluzioni edili di alta qualità che
+                        soddisfino
+                        le esigenze e le aspettative dei nostri clienti, garantendo sempre la massima professionalità e
+                        attenzione
+                        ai dettagli.</p>
                 </div>
-                <div data-aos="fade-right" class="row custom-row">
-                    <div class="col-12 my-3">
-                        <h2 class="custom-subheading">La Nostra Storia</h2>
-                        <p class="custom-subdescription">Da oltre 20 anni operiamo nel settore edile, realizzando progetti
-                            di successo
-                            e guadagnandoci la fiducia di clienti soddisfatti. La nostra esperienza è la tua garanzia di
-                            qualità.</p>
-                    </div>
+            </div>
+            <div data-aos="fade-right" class="row mx-0">
+                <div class="col-12">
+                    <h2 class="custom-subheading">La Nostra Storia</h2>
+                    <p class="custom-subdescription">Da oltre 20 anni operiamo nel settore edile, realizzando progetti
+                        di successo
+                        e guadagnandoci la fiducia di clienti soddisfatti. La nostra esperienza è la tua garanzia di
+                        qualità.</p>
                 </div>
             </div>
         </div>
         <ServicesHome />
         <Projects />
-        <div class="container-custom-contacts">
-            <div class="custom-content">
-                <div class="row">
-                    <div class="col-12 my-5">
-                        <h1 class="custom-heading">Contattaci</h1>
-                    </div>
+        <div class="container px-0 mx-0 container-custom-contacts">
+            <div class="row mx-0">
+                <div class="col-12 d-flex justify-content-center">
+                    <h1 class="custom-heading">Contattaci</h1>
                 </div>
-                <div class="row">
-                    <div class="col-12 mb-4">
-                        <img src="../assets/contacts.jpg" class="img-fluid">
-                    </div>
-                    <div class="col-12 d-flex align-items-center justify-content-center">
-                        <router-link class="btn btn-success" :to="{ name: 'contact_us' }">Contattaci</router-link>
-                    </div>
+            </div>
+            <div class="row mx-0 d-flex">
+                <div class="col-12">
+                    <img src="../assets/contacts.jpg" class="img-fluid">
+                </div>
+                <div class="col-12">
+                    <router-link class="btn btn-success" :to="{ name: 'contact_us' }">Contattaci</router-link>
                 </div>
             </div>
         </div>
@@ -92,7 +88,17 @@ export default {
     background-image: url('../assets/bg-mr.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
+}
+
+.container-custom-about-us {
+    background-color: rgba(235, 235, 235, 255);
+    max-width: 100vw;
+}
+
+.container-custom-contacts {
+    background-color: rgba(20, 20, 18, 255);
+    max-width: 100vw;
 }
 </style>

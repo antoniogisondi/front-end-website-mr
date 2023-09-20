@@ -27,21 +27,19 @@ export default {
 }
 </script>
 <template>
-    <div class="container-custom-service">
-        <div class="custom-content">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="custom-heading">I Nostri Servizi</h1>
-                    <p class="custom-description">Scopri tutti i servizi di qualità che offriamo per realizzare i tuoi
-                        progetti edili.</p>
-                </div>
+    <div class="container container-custom-service">
+        <div class="row mx-0">
+            <div class="col-12">
+                <h1 class="custom-heading">I Nostri Servizi</h1>
+                <p class="custom-description">Scopri tutti i servizi di qualità che offriamo per realizzare i tuoi
+                    progetti edili.</p>
             </div>
-            <div class="row">
-                <div class="col-12" v-for="service in services" :key="service.id">
-                    <div class="custom-service mb-4">
-                        <h2 class="custom-service-title">{{ service.titolo }}</h2>
-                        <p class="custom-service-description">{{ service.descrizione }}</p>
-                    </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12" v-for="service in services" :key="service.id">
+                <div class="custom-service mb-4">
+                    <h2 class="custom-service-title">{{ service.titolo }}</h2>
+                    <p class="custom-service-description">{{ service.descrizione }}</p>
                 </div>
             </div>
         </div>

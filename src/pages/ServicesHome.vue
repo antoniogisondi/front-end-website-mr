@@ -27,25 +27,36 @@ export default {
 }
 </script>
 <template>
-    <div class="container-custom-service">
-        <div class="custom-content">
-            <div class="row">
-                <div class="col-12 my-5">
-                    <h1 class="custom-heading">I Nostri Servizi</h1>
-                    <p class="custom-description">Scopri tutti i servizi di qualità che offriamo per realizzare i tuoi
-                        progetti edili.</p>
-                </div>
+    <div class="container container-custom-service">
+        <div class="row mx-0">
+            <div class="col-12 my-5">
+                <h1 class="title-service">I Nostri Servizi</h1>
+                <p class="description-service">Scopri tutti i servizi di qualità che offriamo per realizzare i tuoi
+                    progetti edili.</p>
             </div>
-            <div class="row">
-                <div class="col-12" v-for="service in services" :key="service.id">
-                    <div class="custom-service mb-4">
-                        <h2 class="custom-service-title">{{ service.titolo }}</h2>
-                        <p class="custom-service-description">{{ service.descrizione }}</p>
-                    </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12" v-for="service in services" :key="service.id">
+                <div class="custom-service mb-4">
+                    <h2 class="title-service">{{ service.titolo }}</h2>
+                    <p class="description-service">{{ service.descrizione }}</p>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.container-custom-service {
+    background-color: rgba(13, 39, 28, 255);
+    max-width: 100vw;
+
+    .title-service {
+        color: white;
+    }
+
+    .description-service {
+        color: white;
+    }
+}
+</style>

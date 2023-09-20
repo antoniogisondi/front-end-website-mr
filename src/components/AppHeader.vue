@@ -11,7 +11,7 @@ export default {
 <template>
     <header>
         <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container p-0 m-0 w-100">
+            <div class="container-fluid p-0 m-0 w-100">
                 <router-link :to="{ name: 'homepage' }" class="navbar-brand mx-5">
                     <img src="../assets/logo-mr.png" alt="Logo Azienda Edile" class="logo img-fluid w-75">
                 </router-link>
