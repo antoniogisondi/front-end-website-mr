@@ -23,8 +23,9 @@ export default {
     }
 }
 </script>
+
 <template>
-    <div class="container container-custom-project">
+    <div class="container container-custom-project text-center">
         <div class="row mx-0">
             <div class="col-12">
                 <h1 class="custom-heading">I Nostri Progetti</h1>
@@ -53,6 +54,7 @@ export default {
         </div>
     </div>
 </template>
+
 
 <style lang="scss">
 .container-custom-project {

@@ -27,7 +27,7 @@ export default {
 }
 </script>
 <template>
-    <div class="container container-custom-service">
+    <div class="container container-custom-service text-center">
         <div class="row mx-0">
             <div class="col-12 my-5">
                 <h1 class="title-service">I Nostri Servizi</h1>
@@ -45,6 +45,7 @@ export default {
         </div>
     </div>
 </template>
+
 
 <style lang="scss">
 .container-custom-service {

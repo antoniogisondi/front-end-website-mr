@@ -20,9 +20,10 @@ export default {
     }
 }
 </script>
+
 <template>
     <div class="container-fluid p-0">
-        <div class="container px-0 mx-0 container-image">
+        <div class="container px-0 mx-0 container-image text-center">
             <div class="row mx-0">
                 <div class="col-12">
                     <div class="text">
@@ -33,7 +34,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="container px-0 mx-0 container-custom-about-us">
+        <div class="container px-0 mx-0 container-custom-about-us text-center">
             <div data-aos="fade-right" class="row mx-0">
                 <div class="col-12">
                     <h1 class="custom-heading">Chi Siamo</h1>
@@ -64,17 +65,17 @@ export default {
         </div>
         <ServicesHome />
         <Projects />
-        <div class="container px-0 mx-0 container-custom-contacts">
+        <div class="container px-0 mx-0 container-custom-contacts text-center">
             <div class="row mx-0">
                 <div class="col-12 d-flex justify-content-center">
                     <h1 class="custom-heading">Contattaci</h1>
                 </div>
             </div>
-            <div class="row mx-0 d-flex">
+            <div class="row mx-0 d-flex justify-content-center align-items-center">
                 <div class="col-12">
                     <img src="../assets/contacts.jpg" class="img-fluid">
                 </div>
-                <div class="col-12">
+                <div class="col-12 mt-3">
                     <router-link class="btn btn-success" :to="{ name: 'contact_us' }">Contattaci</router-link>
                 </div>
             </div>
