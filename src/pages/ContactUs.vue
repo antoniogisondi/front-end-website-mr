@@ -28,7 +28,7 @@ export default {
             //PULISCO L'ARRAY DEGLI ERRORI
             this.errors = {};
 
-            axios.post(`${this.store.baseUrl}/api/contacts`, data).then((response) => {
+            axios.post(`${this.store.hostUrl}/api/contacts`, data).then((response) => {
                 this.success = response.data.success;
                 if (!this.success) {
                     this.errors = response.data.errors;

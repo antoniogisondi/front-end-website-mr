@@ -13,7 +13,7 @@ export default {
     },
     methods: {
         getWorksByType() {
-            axios.get(`${this.store.baseUrl}/api/types`).then((response) => {
+            axios.get(`${this.store.hostUrl}/api/types`).then((response) => {
                 this.types = response.data.results;
             })
                 .catch(error => {

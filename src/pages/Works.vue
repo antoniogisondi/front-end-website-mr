@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         getWorks(slug) {
-            axios.get(`${this.store.baseUrl}/api/works/${slug}`).then((response) => {
+            axios.get(`${this.store.hostUrl}/api/works/${slug}`).then((response) => {
                 if (response.data.success) {
                     this.works = response.data.results;
                 }

@@ -14,7 +14,7 @@ export default {
     },
     methods: {
         getServices() {
-            axios.get(`${this.store.baseUrl}/api/services`).then((response) => {
+            axios.get(`${this.store.hostUrl}/api/services`).then((response) => {
                 if (this.services) {
                     this.services = response.data.results
                 }
