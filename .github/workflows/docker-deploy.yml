@@ -48,15 +48,3 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/standalonealliance/${{ env.IMAGE_NAME }}:latest
 
-      - name: Dispatch k8s deploy
-        uses: convictional/trigger-workflow-and-wait@v1.6.5
-        with:
-          owner: fbisceglia02
-          repo: k8s-update-deploy-workflow
-          github_token: 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
-          workflow_file_name: k8s-update-deploy.yml
-          ref: main
-          wait_interval: 10
-          propagate_failure: true
-          trigger_workflow: true
-          wait_workflow: true
