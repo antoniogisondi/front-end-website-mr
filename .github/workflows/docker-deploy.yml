@@ -37,12 +37,11 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/standalonealliance/${{ env.IMAGE_NAME }}:latest
 
-      - name: Dispatch k8s deploy
-        shell: bash
+      - name: Send POST call
         run: |
-          curl \
-          -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Authorization: token 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" \
-          https://api.github.com/repos/fbisceglia02/k8s-update-deploy-workflow/dispatches \
-          -d '{"event_type":"kubernetes_deployment"}'
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer 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" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/author2/repo2/actions/workflows/<WORKFLOW_FILE_NAME>/dispatches \
+            -d '{"ref":"main"}'
