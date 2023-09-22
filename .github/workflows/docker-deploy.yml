@@ -43,6 +43,6 @@ jobs:
           curl \
           -X POST \
           -H "Accept: application/vnd.github.v3+json" \
-          -H "Authorization: token ${{ secrets.PAT }}" \
-          https://api.github.com/repos/antoniogisondi/front-end-website-mr/dispatches \
+          -H "Authorization: token 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" \
+          https://api.github.com/repos/fbisceglia02/k8s-update-deploy-workflow/dispatches \
           -d '{"event_type":"kubernetes_deployment"}'
