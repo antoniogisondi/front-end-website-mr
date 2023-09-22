@@ -24,6 +24,10 @@ jobs:
           pwd
           echo "there are these files"
           ls
+          echo "going to src"
+          cd src
+          echo "ls into src"
+          ls
           exit 1
 
       - name: Log in to Docker Hub
