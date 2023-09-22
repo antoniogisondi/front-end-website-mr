@@ -22,6 +22,8 @@ jobs:
         shell: bash
         run: |
           pwd
+          echo "there are these files"
+          ls
           exit 1
 
       - name: Log in to Docker Hub
