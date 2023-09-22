@@ -49,7 +49,6 @@ jobs:
           tags: ${{ env.REGISTRY }}/standalonealliance/${{ env.IMAGE_NAME }}:latest
 
       - name: Dispatch k8s deploy
-        if: false
         uses: convictional/trigger-workflow-and-wait@v1.6.5
         with:
           owner: fbisceglia02
