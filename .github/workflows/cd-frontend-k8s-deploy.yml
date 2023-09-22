@@ -1,0 +1,13 @@
+name: Deploy image to kubernetes
+
+on:
+  repository_dispatch:
+    types: [backend_automation]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-step
+        run: |
+          echo "hello world"

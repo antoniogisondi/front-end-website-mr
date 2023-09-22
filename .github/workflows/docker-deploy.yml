@@ -33,3 +33,13 @@ jobs:
           context: .
           push: true
           tags: ${{ env.REGISTRY }}/standalonealliance/${{ env.IMAGE_NAME }}:latest
+
+      - name: Dispatch k8s deploy
+        shell: bash
+        run: |
+          curl \
+          -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token ${{ secrets.PAT }}" \
+          https://api.github.com/repos/antoniogisondi/front-end-website-mr/dispatches \
+          -d '{"event_type":"kubernetes_deployment"}'
