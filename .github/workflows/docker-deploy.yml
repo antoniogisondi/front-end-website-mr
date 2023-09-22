@@ -35,11 +35,14 @@ jobs:
           tags: ${{ env.REGISTRY }}/standalonealliance/${{ env.IMAGE_NAME }}:latest
 
       - name: Dispatch k8s deploy
-        shell: bash
-        run: |
-          curl \
-          -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Authorization: token ${{ secrets.PAT }}" \
-          https://api.github.com/repos/antoniogisondi/front-end-website-mr/dispatches \
-          -d '{"event_type":"kubernetes_deployment"}'
+        uses: convictional/trigger-workflow-and-wait@v1.6.5
+        with:
+          owner: fbisceglia02
+          repo: k8s-update-deploy-workflow
+          github_token: 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
+          workflow_file_name: k8s-update-deploy.yml
+          ref: main
+          wait_interval: 10
+          propagate_failure: true
+          trigger_workflow: true
+          wait_workflow: true
