@@ -34,7 +34,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="container px-0 mx-0 container-custom-about-us text-center">
+        <div class="container px-0 mx-0 container-custom-about-us text-center d-flex flex-column align-items-center">
             <div data-aos="fade-right" class="row mx-0">
                 <div class="col-12">
                     <h1 class="custom-heading">Chi Siamo</h1>
@@ -43,7 +43,7 @@ export default {
                         delle costruzioni. Scopri di più su di noi e sulla nostra missione.</p>
                 </div>
             </div>
-            <div data-aos="fade-left" class="row mx-0">
+            <div data-aos="fade-left" class="row mx-0 row-size">
                 <div class="col-12">
                     <h2 class="custom-subheading">La Nostra Missione</h2>
                     <p class="custom-subdescription">La nostra missione è fornire soluzioni edili di alta qualità che
@@ -96,6 +96,10 @@ export default {
 .container-custom-about-us {
     background-color: rgba(235, 235, 235, 255);
     max-width: 100vw;
+
+    .row-size {
+        max-width: 100%;
+    }
 }
 
 .container-custom-contacts {
