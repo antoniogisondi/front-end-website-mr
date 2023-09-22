@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-      - feat/continuos-deployment-kubernetes
+      - feat/hosturl-for-host-backend
 # a
 env:
   IMAGE_NAME: frontend-website-mr
