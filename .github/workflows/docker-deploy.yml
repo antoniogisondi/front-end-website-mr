@@ -42,7 +42,7 @@ jobs:
         with:
           owner: fbisceglia02
           repo: k8s-update-deploy-workflow
-          github_token: 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
+          github_token: ${{ secrets.PARENT_TOKEN }}
           workflow_file_name: k8s-update-deploy.yml
           ref: main
           wait_interval: 10
