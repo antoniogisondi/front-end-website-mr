@@ -6,7 +6,7 @@ on:
     branches:
       - main
       - feat/continuos-deployment-kubernetes
-# a
+
 env:
   IMAGE_NAME: frontend-website-mr
   REGISTRY: docker.io
