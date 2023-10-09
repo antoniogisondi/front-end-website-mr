@@ -73,8 +73,7 @@ export default {
             </div>
         </div>
     </div>
-</template>
-  
+</template> 
 
 <style lang="scss">
 // CUSTOM ABOUT US

@@ -15,11 +15,12 @@ export default {
                 <router-link :to="{ name: 'homepage' }" class="navbar-brand mx-5">
                     <img src="../assets/logo-mr.png" alt="Logo Azienda Edile" class="logo img-fluid w-75">
                 </router-link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler data-bs-toggle" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse mx-5" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <router-link :to="{ name: 'homepage' }" class="navbar-link">
