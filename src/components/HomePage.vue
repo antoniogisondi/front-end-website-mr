@@ -24,17 +24,6 @@ export default {
 
 <template>
     <div class="container-fluid p-0">
-        <div class="container px-0 mx-0 container-image text-center">
-            <div class="row mx-0">
-                <div class="col-12">
-                    <div class="text">
-                        <p>
-                            Una costruzione con cui puoi stare bene
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="container px-0 mx-0 container-custom-about-us text-center d-flex flex-column align-items-center">
             <div data-aos="fade-right" class="row mx-0">
                 <div class="col-12">
@@ -88,14 +77,7 @@ export default {
   
 
 <style lang="scss">
-.container-image {
-    background-image: url('../assets/bg-mr.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100vw;
-    height: 100vh;
-}
-
+// CUSTOM ABOUT US
 .container-custom-about-us {
     background-color: rgba(235, 235, 235, 255);
     max-width: 100vw;
@@ -109,6 +91,8 @@ export default {
     background-color: rgba(20, 20, 18, 255);
     max-width: 100vw;
 }
+
+// END
 
 // CONTACT US BUTTONS EFFECTS
 .bn632-hover {

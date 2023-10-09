@@ -45,15 +45,30 @@ export default {
                 </div>
             </div>
         </nav>
+        <div class="background-image"></div>
     </header>
 </template>
 
 <style lang="scss">
-.navbar-custom {
-    background-color: white;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.799);
+// NAVBAR TRANSPARENT ON JUMBOTRON
+header {
+    height: 100vh;
 }
 
+.background-image {
+    background-image: url('../assets/bg-mr.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -100;
+}
+
+// END
+
+// NAVBAR CUSTOM
 .navbar-brand img {
     max-width: 200px;
 }
@@ -79,4 +94,6 @@ export default {
     display: inline-block;
     margin: 0;
 }
+
+// END
 </style>
