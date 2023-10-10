@@ -41,10 +41,16 @@
     background-color: rgba(235, 235, 235, 255);
     max-width: 100vw;
 
-    .row-size {
-        max-width: 100%;
+    .col-size {
+        max-width: 50%;
+    }
+
+    img {
+        width: 500px;
+        height: 600px;
     }
 }
+
 
 // END
 
