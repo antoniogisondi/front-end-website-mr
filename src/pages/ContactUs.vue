@@ -100,8 +100,4 @@ export default {
         </div>
     </div>
 </template>
-<style lang="scss">
-.container-custom-contact-us {
-    background-color: rgba(20, 20, 18, 255);
-}
-</style>
+<style lang="scss"></style>

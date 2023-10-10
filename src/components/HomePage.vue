@@ -17,7 +17,6 @@ export default {
     },
     mounted() {
         AOS.init();
-
     }
 }
 </script>
@@ -55,43 +54,23 @@ export default {
         </div>
         <ServicesHome />
         <Projects />
-        <div class="container px-0 mx-0 container-custom-contacts text-center">
-            <div class="row mx-0">
-                <div class="col-12 d-flex justify-content-center">
-                    <h1 class="custom-heading">Contattaci</h1>
-                </div>
-            </div>
-            <div class="row mx-0 d-flex justify-content-center align-items-center">
-                <div class="col-12">
-                    <img src="../assets/contacts.jpg" class="img-fluid">
-                </div>
-                <div class="col-12 mt-3">
-                    <router-link :to="{ name: 'contact_us' }">
-                        <button class="bn632-hover bn22">Contattaci</button>
-                    </router-link>
-                </div>
-            </div>
+        <div class="container-fluid px-0 mx-0 footer">
+
         </div>
     </div>
 </template> 
 
+<!-- <router-link :to="{ name: 'contact_us' }">
+    <button class="bn632-hover bn22">Contattaci</button>
+</router-link> -->
 <style lang="scss">
-// CUSTOM ABOUT US
-.container-custom-about-us {
-    background-color: rgba(235, 235, 235, 255);
-    max-width: 100vw;
-
-    .row-size {
-        max-width: 100%;
-    }
+.footer {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/bg-footer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-.container-custom-contacts {
-    background-color: rgba(20, 20, 18, 255);
-    max-width: 100vw;
-}
-
-// END
 
 // CONTACT US BUTTONS EFFECTS
 .bn632-hover {
@@ -132,4 +111,6 @@ export default {
             #2bb673);
     box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
+
+// END
 </style>

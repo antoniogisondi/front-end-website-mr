@@ -14,12 +14,19 @@ const router = createRouter({
         {
             path: '/',
             name: 'homepage',
-            component: HomePage
+            component: HomePage,
+            meta: {
+                bgImage: 'background-image',
+            }
         },
         {
             path: '/services',
             name: 'services',
-            component: Services
+            component: Services,
+            meta: {
+                headerClass: 'header-pages',
+                bgImage: 'bg-none',
+            }
         },
         {
             path: '/projects',
@@ -29,23 +36,39 @@ const router = createRouter({
         {
             path: '/contact-us',
             name: 'contact_us',
-            component: ContactUs
+            component: ContactUs,
+            meta: {
+                headerClass: 'header-pages',
+                bgImage: 'bg-none',
+            }
         },
         {
             path: '/blog',
             name: 'blog',
-            component: Blog
+            component: Blog,
+            meta: {
+                headerClass: 'header-pages',
+                bgImage: 'bg-none',
+            }
         },
         {
             path: '/thank-you',
             name: 'thank_you',
-            component: ThankYou
+            component: ThankYou,
+            meta: {
+                headerClass: 'header-pages',
+                bgImage: 'bg-none',
+            }
         },
         {
             path: '/works/:slug',
             name: 'works',
             component: Works,
-            props: true
+            props: true,
+            meta: {
+                headerClass: 'header-pages',
+                bgImage: 'bg-none',
+            }
         },
     ]
 });

@@ -33,14 +33,14 @@ export default {
         </div>
         <div class="row mx-0">
             <div class="col-12 d-flex flex-row justify-content-center align-items-center flex-wrap">
-                <div class="card card-size mx-3 my-3" v-for="(type, index) in types" :key="index">
+                <div class="card card-size mx-3 my-3 bn54" v-for="(type, index) in types" :key="index">
                     <!-- Immagine -->
                     <img v-if="type.cover_image" :src="`${this.store.baseUrl}/storage/${type.cover_image}`" :alt="type.slug"
                         class="img-fluid card-img-top">
                     <img v-else src="../assets/placeholder-image.jpg" alt="logo" class="img-fluid card-img-top">
 
                     <!-- Testo della card -->
-                    <div class="card-body text-center">
+                    <div class="card-body text-center bn54span">
                         <h3>{{ type.nome_tipologia }}</h3>
                     </div>
 
@@ -58,15 +58,6 @@ export default {
 
 
 <style lang="scss">
-.container-custom-project {
-    background-color: rgba(235, 235, 235, 255);
-    max-width: 100vw;
-
-    .card-size {
-        width: 20rem;
-    }
-}
-
 // BUTTON EFFECTS
 .bn632-hover {
     width: 160px;
@@ -106,4 +97,67 @@ export default {
             #3f86ed);
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
+
+// ANIMATION FOR PROJECTS CARD
+.bn54 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bn54:hover {
+    animation: bn54rotate 0.7s ease-in-out both;
+}
+
+.bn54:hover .bn54span {
+    animation: bn54storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes bn54rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bn54storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+// END
 </style>

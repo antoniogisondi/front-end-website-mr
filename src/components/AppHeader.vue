@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header :class="$route.meta.headerClass">
         <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container-fluid p-0 m-0 w-100">
                 <router-link :to="{ name: 'homepage' }" class="navbar-brand mx-5">
@@ -46,18 +46,31 @@ export default {
                 </div>
             </div>
         </nav>
-        <div class="background-image"></div>
+        <div :class="$route.meta.bgImage"></div>
     </header>
 </template>
 
 <style lang="scss">
+// META FOR WORKS PAGE OF PROJECTS
+.header-pages {
+    background-color: white;
+    height: 150px;
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.background-image {
+    background-image: none;
+}
+
+// END
+
 // NAVBAR TRANSPARENT ON JUMBOTRON
 header {
     height: 100vh;
 }
 
 .background-image {
-    background-image: url('../assets/bg-mr.jpg');
+    background-image: url('../assets/bg-header-2.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -65,35 +78,6 @@ header {
     position: absolute;
     top: 0;
     z-index: -100;
-}
-
-// END
-
-// NAVBAR CUSTOM
-.navbar-brand img {
-    max-width: 200px;
-}
-
-.navbar-toggler-icon {
-    color: #fff;
-}
-
-.navbar-link {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s;
-}
-
-.navbar-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
-
-.nav-link-text {
-    display: inline-block;
-    margin: 0;
 }
 
 // END

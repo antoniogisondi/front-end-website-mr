@@ -26,6 +26,7 @@ export default {
     },
 }
 </script>
+
 <template>
     <div class="container container-custom-service text-center">
         <div class="row mx-0">
@@ -46,18 +47,4 @@ export default {
     </div>
 </template>
 
-
-<style lang="scss">
-.container-custom-service {
-    background-color: rgba(13, 39, 28, 255);
-    max-width: 100vw;
-
-    .title-service {
-        color: white;
-    }
-
-    .description-service {
-        color: white;
-    }
-}
-</style>
+<style lang="scss"></style>
