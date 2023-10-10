@@ -52,7 +52,22 @@ export default {
         <ServicesHome />
         <Projects />
         <div class="container-fluid px-0 mx-0 footer">
+            <div class="row mx-0">
+                <div class="col-4 ms-5 mt-5">
+                    <img class="logo img-fluid" src="../assets/logo-mr.png" alt="logo-mr">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
 
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
         </div>
     </div>
 </template> 
@@ -62,6 +77,11 @@ export default {
 </router-link> -->
 <style lang="scss">
 @use '../styles/generals.scss' as *;
+
+// FOOTER
+.logo {
+    max-width: 200px;
+}
 
 .footer {
     width: 100%;
