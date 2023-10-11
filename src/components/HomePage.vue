@@ -51,21 +51,102 @@ export default {
         </div>
         <ServicesHome />
         <Projects />
-        <div class="container-fluid px-0 mx-0 footer">
-            <div class="row mx-0">
-                <div class="col-4 ms-5 mt-5">
-                    <img class="logo img-fluid" src="../assets/logo-mr.png" alt="logo-mr">
+        <div class="container-fluid px-0 mx-0 footer d-flex justify-content-around">
+            <div class="row mx-0 mt-5 w-25">
+                <div class="col-4">
+                    <img class="logo" src="../assets/logo-mr.png" alt="logo-mr">
                 </div>
             </div>
-            <div class="row">
+            <div class="row mx-0 d-flex justify-content-center mt-5 w-75">
                 <div class="col">
-
+                    <h5>SERVIZI</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Opere Edili
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Restauri
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Ristrutturazioni
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Consolidamenti
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Progettazioni
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col">
-
+                    <h5>CONTATTI</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Opere Edili
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Restauri
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Ristrutturazioni
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Consolidamenti
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Progettazioni
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col">
-
+                    <h5>DOVE SIAMO</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Opere Edili
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Restauri
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Ristrutturazioni
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Consolidamenti
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-muted">
+                                Progettazioni
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -82,7 +163,6 @@ export default {
 }
 
 .footer {
-    width: 100%;
     height: 100vh;
     background-image: url('../assets/bg-footer.png');
     background-size: cover;
